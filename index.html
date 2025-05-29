@@ -105,7 +105,7 @@
       <div class="slant" style="background-image: url('images/slant.svg');"></div>
     </div>
 
-    <div class="py-3">
+    <!-- <div class="py-3">
       <div class="container">
 
         <div class="owl-logos owl-carousel">
@@ -129,7 +129,7 @@
           </div>
           
 
-        </div>
+        </div> -->
         
             
       </div>
@@ -138,121 +138,127 @@
 
     
    <style>
-      .services-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        padding: 10px;
-      }
-      .service-card {
-        position: relative;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        width: 280px;        /* slightly smaller for better wrap */
-        height: 380px;
-        padding: 20px;
-        box-sizing: border-box;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      }
-      .service-card::before {
-        content: '';
-        position: absolute;
-        top: -100%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 123, 255, 0.15);
-        transition: all 0.4s ease;
-        z-index: 1;
-      }
-      .service-card:hover::before {
-        top: 0;
-      }
-      .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      }
-      .service-card * {
-        position: relative;
-        z-index: 2;
-      }
-      .service-card h3 {
-        margin-top: 0;
-        color: #007bff;
-      }
-      .service-card p {
-        flex-grow: 1;
-        font-size: 14px;
-        color: #444;
-      }
-      .service-features {
-        list-style: disc inside;
-        padding-left: 0;
-        margin: 10px 0;
-        font-size: 13px;
-        color: #555;
-      }
-      .pricing p {
-        font-weight: bold;
-        color: #222;
-      }
-      .buttons {
-        margin-top: 10px;
-        display: flex;
-        gap: 10px;
-      }
-      .buttons button {
-        flex: 1;
-        padding: 8px 12px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-weight: 600;
-      }
-      .read-more {
-        background-color: #007bff;
-        color: white;
-      }
-      .read-more a {
-        color: white;
-        text-decoration: none;
-        display: block;
-      }
-      .buy-now-btn {
-        background-color: #28a745;
-        color: white;
-      }
-      .buy-now-btn:hover {
-        background-color: #218838;
-      }
-      .read-more:hover {
-        background-color: #0056b3;
-      }
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+  }
+  .service-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    width: 250px;        /* square look */
+    height: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.15);
+    transition: all 0.4s ease;
+    z-index: 1;
+  }
+  .service-card:hover::before {
+    top: 0;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  .service-card * {
+    position: relative;
+    z-index: 2;
+  }
+  .service-card h3 {
+    margin-top: 0;
+    color: #007bff;
+    font-size: 16px;
+  }
+  .service-card p {
+    flex-grow: 1;
+    font-size: 13px;
+    color: #444;
+    margin: 5px 0;
+  }
+  .service-features {
+    list-style: disc inside;
+    padding-left: 0;
+    margin: 5px 0;
+    font-size: 12px;
+    color: #555;
+  }
+  .pricing p {
+    font-weight: bold;
+    color: #222;
+  }
+  .buttons {
+    margin-top: 5px;
+    display: flex;
+    gap: 6px;
+  }
+  .buttons button {
+    flex: 1;
+    padding: 6px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .read-more {
+    background-color: #007bff;
+    color: white;
+  }
+  .read-more a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  .buy-now-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  .buy-now-btn:hover {
+    background-color: #218838;
+  }
+  .read-more:hover {
+    background-color: #0056b3;
+  }
 
-      /* Responsive adjustments */
-      @media (max-width: 960px) {
-        .service-card {
-          width: 45%; /* two cards per row on medium screens */
-        }
-      }
-      @media (max-width: 600px) {
-        .service-card {
-          width: 90%; /* one card per row on small screens */
-        }
-      }
-    </style>
+  /* Responsive adjustments */
+  @media (max-width: 960px) {
+    .service-card {
+      width: 45%;
+      height: 250px;
+    }
+  }
+  @media (max-width: 600px) {
+    .service-card {
+      width: 90%;
+      height: 250px;
+    }
+  }
+</style>
+
 </style>
    <div class="services-section">
   <div style="text-align: center;">
-  <h2 class="section-title">Digital Marketing Services</h2>
-</div>
+    <h2 class="section-title">Digital Marketing Services</h2>
+  </div>
 
   <div class="services-container">
 
@@ -260,9 +266,10 @@
       <div class="icon">&#128640;</div>
       <h3>SEO Optimization</h3>
       <p>Improve your website’s ranking and visibility on search engines.</p>
+      <p><strong>Price:</strong> ₹2999</p>
       <div class="buttons">
-        <button onclick="buyNow('SEO Optimization')">Buy Now</button>
-        <button class="secondary">Read More</button>
+       <button class="buy-now-btn" onclick="redirectToCheckout('seo_optimization', 2999)">Buy Now</button>
+                <button class="read-more"><a href="seo_optimization.html">Read More</a></button>
       </div>
     </div>
 
@@ -270,19 +277,21 @@
       <div class="icon">&#127758;</div>
       <h3>Social Media Marketing</h3>
       <p>Grow your audience and brand awareness on social platforms.</p>
+      <p><strong>Price:</strong> ₹3499</p>
       <div class="buttons">
-        <button onclick="buyNow('Social Media Marketing')">Buy Now</button>
-        <button class="secondary">Read More</button>
+        <button class="buy-now-btn" onclick="redirectToCheckout('social_media_marketing', 3499)">Buy Now</button>
+          <button class="read-more"><a href="social_media_marketing.html">Read More</a></button>
       </div>
     </div>
 
     <div class="service-card">
       <div class="icon">&#9993;</div>
-      <h3>Email Marketing</h3>
+      <h3>Youtube Marketing</h3>
       <p>Send personalized email campaigns to engage your customers.</p>
+      <p><strong>Price:</strong> ₹2499</p>
       <div class="buttons">
-        <button onclick="buyNow('Email Marketing')">Buy Now</button>
-        <button class="secondary">Read More</button>
+         <button class="buy-now-btn" onclick="redirectToCheckout('youtube_marketing', 2499)">Buy Now</button>
+        <button class="read-more"><a href="youtube_marketing.html">Read More</a></button>
       </div>
     </div>
 
@@ -290,9 +299,10 @@
       <div class="icon">&#127909;</div>
       <h3>Content Creation</h3>
       <p>Create engaging content including videos, blogs, and graphics.</p>
+      <p><strong>Price:</strong> ₹3999</p>
       <div class="buttons">
-        <button onclick="buyNow('Content Creation')">Buy Now</button>
-        <button class="secondary">Read More</button>
+         <button class="buy-now-btn" onclick="redirectToCheckout('content_creation', 3999)">Buy Now</button>
+        <button class="read-more"><a href="content_creation.html">Read More</a></button>
       </div>
     </div>
 
@@ -300,9 +310,10 @@
       <div class="icon">&#128181;</div>
       <h3>Paid Advertising</h3>
       <p>Run effective Google & Facebook ads to get instant traffic.</p>
+      <p><strong>Price:</strong> ₹5999</p>
       <div class="buttons">
-        <button onclick="buyNow('Paid Advertising')">Buy Now</button>
-        <button class="secondary">Read More</button>
+         <button class="buy-now-btn" onclick="redirectToCheckout('paid_advertisment', 5999)">Buy Now</button>
+        <button class="read-more"><a href="paid_advertisment.html">Read More</a></button>
       </div>
     </div>
 
@@ -310,19 +321,94 @@
       <div class="icon">&#128202;</div>
       <h3>Analytics & Reports</h3>
       <p>Track your campaigns and understand your ROI with reports.</p>
+      <p><strong>Price:</strong> ₹1999</p>
       <div class="buttons">
-        <button onclick="buyNow('Analytics & Reports')">Buy Now</button>
-        <button class="secondary">Read More</button>
+        <button class="buy-now-btn" onclick="redirectToCheckout('Analytics_Report', 1999)">Buy Now</button>
+         <button class="read-more"><a href="analytics_Report.html">Read More</a></button>
       </div>
     </div>
+
+    <!-- New Added Services -->
+    <div class="service-card">
+      <div class="icon">&#128100;</div>
+      <h3>Influencer Marketing</h3>
+      <p>Promote your brand through trusted influencers and creators.</p>
+      <p><strong>Price:</strong> ₹4999</p>
+      <div class="buttons">
+         <button class="buy-now-btn" onclick="redirectToCheckout('influencing_marketing', 25000)">Buy Now</button>
+         <button class="read-more"><a href="influencing_marketing.html">Read More</a></button>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">&#128142;</div>
+      <h3>Affiliate Marketing</h3>
+      <p>Boost sales through affiliate partners with commission-based promotions.</p>
+      <p><strong>Price:</strong> ₹3299</p>
+      <div class="buttons">
+         <button class="buy-now-btn" onclick="redirectToCheckout('Affiliate_Marketing', 3299)">Buy Now</button>
+      <button class="read-more"><a href="affiliate_marketing.html">Read More</a></button>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">&#128241;</div>
+      <h3>Mobile Marketing</h3>
+      <p>Reach your customers through SMS, push notifications, and mobile ads.</p>
+      <p><strong>Price:</strong> ₹2799</p>
+      <div class="buttons">
+         <button class="buy-now-btn" onclick="redirectToCheckout('Mobile_Marketing', 25000)">Buy Now</button>
+         <button class="read-more"><a href="mobile_marketing.html">Read More</a></button>
+      </div>
+    </div>
+
+    <!-- ...previous code stays the same -->
+
+    <div class="service-card">
+      <div class="icon">&#128249;</div>
+      <h3>Video Marketing</h3>
+      <p>Promote your brand with engaging video content and ads.</p>
+      <p><strong>Price:</strong> ₹4599</p>
+      <div class="buttons">
+        <button class="buy-now-btn" onclick="redirectToCheckout('vedio_marketing', 4599)">Buy Now</button>
+        <button class="read-more"><a href="vedio_marketing.html">Read More</a></button>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">&#128221;</div>
+      <h3>Online Reputation Management</h3>
+      <p>Build and maintain a positive image of your brand online.</p>
+      <p><strong>Price:</strong> ₹5499</p>
+      <div class="buttons">
+         <button class="buy-now-btn" onclick="redirectToCheckout('Online_Reputation_Management', 5499)">Buy Now</button>
+        <button class="read-more"><a href="online_reputation.html">Read More</a></button>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">&#9881;&#65039;</div>
+      <h3>Marketing Automation</h3>
+      <p>Automate repetitive marketing tasks and campaigns efficiently.</p>
+      <p><strong>Price:</strong> ₹3799</p>
+      <div class="buttons">
+        <button class="buy-now-btn" onclick="redirectToCheckout('Marketing_Automation', 3799)">Buy Now</button>
+        <button class="read-more"><a href="marketing_automation.html">Read More</a></button>
+      </div>
+    </div>
+
+<!-- ...close services-container and services-section -->
+
 
   </div>
 </div>
 
 
+
 <script>
-  function buyNow(service) {
-    alert("You selected the '" + service + "' service to purchase.");
+  function redirectToCheckout(service, price) {
+    alert(`Redirecting to checkout for ${service} with price ₹${price}`);
+    // Add real redirect code here
   }
 </script>
 
@@ -345,12 +431,13 @@
         <div class="row feature align-items-center justify-content-between">
           <div class="col-lg-7 section-stack order-lg-2 mb-4 mb-lg-0 position-relative" data-aos="fade-up" data-aos-delay="0">
 
-           <div class="image-stack__item image-stack__item--bottom">
-  <video autoplay muted loop playsinline>
-    <source src="https://media.istockphoto.com/id/530909686/video/busy-startup-company-office.mp4?s=mp4-640x640-is&k=20&c=lPelvvAIffmOFBcO1FLP_R6c4rF5RvBxnAW7FcjR21c=" type="video/mp4">
-    
+  <div class="image-stack__item image-stack__item--bottom">
+  <video autoplay muted loop playsinline width="600" height="500" disablePictureInPicture>
+    <source src="https://videos.pexels.com/video-files/6561562/6561562-uhd_2560_1440_25fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
   </video>
 </div>
+
 
 
           </div>
@@ -371,11 +458,11 @@
         
         <div class="row feature align-items-center justify-content-between">
           <div class="col-lg-7 mb-4 mb-lg-0 section-stack" data-aos="fade-up" data-aos-delay="0">
-            <img src="https://img.freepik.com/free-photo/staff-meeting-group-young-modern-people-smart-casual-wear-discussing-something-while-working-creative-office-business-time_496169-1626.jpg?ga=GA1.1.496258215.1740045152&semt=ais_hybrid&w=740" alt="Image" class="img-fluid">
+            <img src="https://images.pexels.com/photos/7433884/pexels-photo-7433884.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-4 section-title" data-aos="fade-up" data-aos-delay="100">
             
-            <h2 class="font-weight-bold mb-4">Far far away, behind the word mountains</h2>
+            <h2 class="font-weight-bold mb-4"><p>In the fast-paced digital world, effective marketing strategies help brands rise above the noise and reach their target audience with precision.</p></h2>
             <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live.</p>
             <p><a href="#" class="btn btn-primary">Get Started</a></p>
 
@@ -416,8 +503,8 @@
                 <div class="price-wrap">
                   <div class="price">
                     <div>
-                      <div>$29</div>
-                      <div>$299</div>
+                      <div>₹1500</div>
+                      <div>₹30000</div>
                     </div>
                   </div>
                 </div>
@@ -451,8 +538,8 @@
                 <div class="price-wrap">
                   <div class="price">
                     <div>
-                      <div>$49</div>
-                      <div>$599</div>
+                      <div>₹1100</div>
+                      <div>₹20000</div>
                     </div>
                   </div>
                 </div>
@@ -486,8 +573,8 @@
                 <div class="price-wrap">
                   <div class="price">
                     <div>
-                      <div>$99</div>
-                      <div>$1,999</div>
+                      <div>₹1700</div>
+                      <div>₹50000</div>
                     </div>
                   </div>
                 </div>
@@ -532,10 +619,10 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center mb-4">
                     <div class="photo mr-3">
-                      <img src="images/person_4-min.jpg" alt="Image" class="img-fluid">
+                      <img src="https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image" class="img-fluid">
                     </div>
                     <div class="author">
-                      <cite class="d-block mb-0">Kaila Woodland</cite>
+                      <cite class="d-block mb-0">Jayesh sha</cite>
                       <span>Owner, Greenland, Inc.</span>
                     </div>
                   </div>
@@ -547,10 +634,10 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center mb-4">
                     <div class="photo mr-3">
-                      <img src="images/person_1-min.jpg" alt="Image" class="img-fluid">
+                      <img src="https://images.pexels.com/photos/7651805/pexels-photo-7651805.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image" class="img-fluid">
                     </div>
                     <div class="author">
-                      <cite class="d-block mb-0">Kaila Woodland</cite>
+                      <cite class="d-block mb-0">Preeti Agarwal</cite>
                       <span>Owner, Greenland, Inc.</span>
                     </div>
                   </div>
@@ -562,10 +649,10 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center mb-4">
                     <div class="photo mr-3">
-                      <img src="images/person_2-min.jpg" alt="Image" class="img-fluid">
+                      <img src="https://images.pexels.com/photos/7163461/pexels-photo-7163461.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image" class="img-fluid">
                     </div>
                     <div class="author">
-                      <cite class="d-block mb-0">Kaila Woodland</cite>
+                      <cite class="d-block mb-0">Yash thakur</cite>
                       <span>Owner, Greenland, Inc.</span>
                     </div>
                   </div>
@@ -662,13 +749,13 @@
             </div>
             <div class="widget">
               <h3>Connect with us</h3>
-              <ul class="social list-unstyled">
+              <!-- <ul class="social list-unstyled">
                 <li><a href="#"><span class="icon-facebook"></span></a></li>
                 <li><a href="#"><span class="icon-twitter"></span></a></li>
                 <li><a href="#"><span class="icon-instagram"></span></a></li>
                 <li><a href="#"><span class="icon-dribbble"></span></a></li>
                 <li><a href="#"><span class="icon-linkedin"></span></a></li>
-              </ul>
+              </ul> -->
             </div>
           </div>
           <div class="col-lg-6">
@@ -685,8 +772,8 @@
                      <li><a href="services.html">Services
 
                      </a></li>
-                    <li><a href="portfolio.html">Work</a></li>
-                    <li><a href="#">Process</a></li>
+                    <!-- <li><a href="portfolio.html">Work</a></li> -->
+                    <!-- <li><a href="#">Process</a></li> -->
                     <li><a href="about.html">About Us</a></li>
                   </ul>
                 </div>
@@ -695,10 +782,10 @@
                 <div class="widget">
                   <ul class="links list-unstyled">
                     <li><a href="#">Press</a></li>
-                    <li><a href="single.html">Blog</a></li>
+                    <!-- <li><a href="single.html">Blog</a></li> -->
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Privacy</a></li>
+                    <!-- <li><a href="#">Support</a></li> -->
+                    <li><a href="privacy-policy.html">Privacy-Policy</a></li>
                   </ul>
                 </div>
               </div>
@@ -706,9 +793,9 @@
                 <div class="widget">
                   <ul class="links list-unstyled">
                     <li><a href="#">Privacy</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Process</a></li>
+                    <!-- <li><a href="#">FAQ</a></li> -->
+                    <!-- <li><a href="#">Careers</a></li> -->
+                    <!-- <li><a href="#">Process</a></li> -->
                     <li><a href="about.html">About Us</a></li>
                   </ul>
                 </div>
@@ -748,6 +835,12 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/custom.js"></script>
+      <script>
+        function redirectToCheckout(serviceName, price) {
+            const checkoutUrl = `checkout.html?service=${encodeURIComponent(serviceName)}&price=${price}¤cy=INR`;
+            window.location.href = checkoutUrl;
+        }
+    </script>
 
     
   </body>
