@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+     <link rel="shortcut icon" href="favicon.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="fonts/feather/style.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Apex - Home</title>
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .checkout-card {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .checkout-card h2 {
+            font-weight: 600;
+        }
+
+        .form-select {
+            height: 50px;
+            font-size: 16px;
+        }
+
+        .payment-options .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .btn-dark {
+            background-color: #4285F4;
+        }
+
+        .btn-success {
+            background-color: #672AB6;
+        }
+
+        .btn-info {
+            background-color: #002970;
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="checkout-card">
+        <h2 class="text-center text-primary mb-4">Checkout</h2>
+
+        <!-- Course Selection -->
+        <div class="mb-4">
+            <label for="courseSelect" class="form-label">Select Services:</label>
+            <select id="courseSelect" class="form-select" onchange="updatePrice()">
+                <option value="seo_optimization" data-price="30000">Seo Optimization - ₹30000</option>
+                <option value="social_media_marketing" data-price="50000">Social_Media_Marketing - ₹50000</option>
+                <option value="youtube_marketing" data-price="20000">Youtube_Marketing - ₹20000</option>
+                <option value="content_creation" data-price="25000">Content_Creation- ₹25000</option>
+                <option value="paid_advertisment" data-price="35000">Paid_Advertisment - ₹35000</option>
+                <option value="analytics_Report" data-price="40000">Analytics_Report - ₹40000</option>
+                <option value="influencing_marketing" data-price="40000">Influence_Marketing- ₹40000</option>
+                <option value="affiliate_marketing" data-price="40000">Affiliate_Marketing - ₹40000</option>
+                <option value="mobile_marketing" data-price="40000">Mobile_Marketing - ₹40000</option>
+                <option value="vedio_marketing" data-price="40000">Vedio_Marketing- ₹40000</option>
+                <option value="online_reputation_management" data-price="40000">Online_Reputation_Management - ₹40000</option>
+                <option value="marketing_automation" data-price="40000">Marketing_Automation - ₹40000</option>
+            </select>
+        </div>
+
+        <!-- Payment Options -->
+        <div class="payment-options">
+            <h4 class="text-secondary text-center mb-3">Select a Payment Method:</h4>
+
+            <a class="btn btn-dark" href="#" onclick="makePayment('Google Pay'); return false;">
+                <i class="bi bi-google"></i> Pay with Google Pay
+            </a>
+            <a class="btn btn-success" href="#" onclick="makePayment('PhonePe'); return false;">
+                <i class="bi bi-phone"></i> Pay with PhonePe
+            </a>
+            <a class="btn btn-info text-white" href="#" onclick="makePayment('Paytm'); return false;">
+                <i class="bi bi-wallet2"></i> Pay with Paytm
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 ACAMUS UTILITY IT Solutions. All rights reserved.
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        let selectedPrice = 30000; // default
+
+        function updatePrice() {
+            const select = document.getElementById('courseSelect');
+            selectedPrice = parseFloat(select.options[select.selectedIndex].getAttribute('data-price'));
+        }
+
+        function makePayment(method) {
+            const course = document.getElementById('courseSelect').value;
+            const amount = selectedPrice;
+
+            if (amount <= 0) {
+                alert('Please select a valid course with a price.');
+                return;
+            }
+
+            let paymentUrl = '';
+            const merchantId = "omkarnathdubey127-2@okhdfcbank";
+            const merchantName = "ACAMUS UTILITY";
+            const transactionId = 'TXN' + Date.now();
+
+            switch (method) {
+                case 'Google Pay':
+                    paymentUrl = `gpay://upi/pay?pa=${merchantId}&pn=${merchantName}&tr=${transactionId}&am=${amount}&cu=INR`;
+                    break;
+                case 'PhonePe':
+                    paymentUrl = `phonepe://pay?pa=${merchantId}&pn=${merchantName}&tr=${transactionId}&am=${amount}&cu=INR`;
+                    break;
+                case 'Paytm':
+                    paymentUrl = `paytmmp://pay?pa=${merchantId}&pn=${merchantName}&tr=${transactionId}&am=${amount}&cu=INR`;
+                    break;
+                default:
+                    alert('Payment method not supported.');
+                    return;
+            }
+
+            window.location.href = paymentUrl;
+
+            setTimeout(() => {
+                alert(`If ${method} app didn't open, please ensure it is installed and try again. Amount: ₹${amount}`);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
